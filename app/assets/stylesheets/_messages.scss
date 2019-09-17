@@ -3,7 +3,7 @@
   width: 100vw;
   background-color: red;
 }
-.header{
+.side-bar{
   width: 300px;
   background:#2f3e51;
   height: 100vh;
@@ -11,29 +11,31 @@
   font-weight: bold;
   float:left;
 
-  &__edit{
+  .header{
     background: #253141;
     width: 260px;
     padding: 35px 20px 15px; 
     font-size: 16px;
     
   }
-  &__box{
-    float: right;
-  }
-  &__box2{
-    float: right;
-  }
+    .list{
+      float: left;
+    }
   &__sample{
     width: 260px;
     padding: 0 20px;
   }
-  &__name{
-    font-size: 15px;
-  }
+  
   &__comments{
     padding: 5px 0 40px;
   }
+}
+.groups{
+  width: 260px;
+  padding: 0 20px;
+    &__name{
+      font-size: 15px;
+    }
 }
 .contents{
   height: 100vh;

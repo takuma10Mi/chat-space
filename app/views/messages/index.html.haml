@@ -1,21 +1,6 @@
 
 .html
-  .header
-    .header__edit
-      test-user
-      .header__box
-        = link_to do
-          = fa_icon 'pencil-square-o', class: 'icon'
-      .header__box2
-        = link_to edit_user_path(current_user) do
-          = fa_icon 'cog', class: 'icon'
-
-    .header__sample 
-      .header__name
-        user
-      .header__comments
-        こんにちは
-    
+  = render "side_bar"
   .contents
     .contents__group
       .contents__name
