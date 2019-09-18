@@ -58,3 +58,5 @@ gem "better_errors"
 gem "binding_of_caller"
 gem "erb2haml"
 gem "devise"
+gem 'carrierwave'
+gem 'mini_magick'
