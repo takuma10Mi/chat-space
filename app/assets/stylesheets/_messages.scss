@@ -68,11 +68,12 @@
           height: 50px;
           padding: 20px 0;
           &__message{
-            height: 46px;
+            height: 50px;
             padding: 0 10px; 
             position: absolute;
             width: calc(100% - 100px);
             position: relative;
+            border: none;
           
             &__image{
               position: absolute;
@@ -102,6 +103,8 @@
             right: 0;
             margin: auto;
             text-align: center;
+            border: none;
+            
           }
           
         }
