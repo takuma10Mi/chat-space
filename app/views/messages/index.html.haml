@@ -18,11 +18,11 @@
       .contents__btn__form
         = form_for [@group, @message], :html => {:class => "contents__btn__form__box"} do |f|
           = f.text_field :content, class: 'contents__btn__form__box__message', placeholder: 'type a message'
-          %div
-            = f.label :image, class: 'contents__btn__form__box__message__image' do
-              = fa_icon 'picture-o', class: 'contents__btn__form__box__message__image__icon'
-              = f.file_field :image, class: 'contents__btn__form__box__message__image__hidden'
-          = f.submit 'Send', class: 'contents__btn__form__box__submit'
-  .messages
-    = render @messages
+          .contents__btn__form__mask
+            = f.label :image, class: 'contents__btn__form__box__mask__image' do
+              = fa_icon 'picture-o', class: 'contents__btn__form__box__mask__image__icon'
+              = f.file_field :image, class: 'contents__btn__form__box__mask__image__hidden'
+          = f.submit 'Send', class: 'contents__btn__form__box__mask__submit'
+  -# .messages
+  -#   = render @messages
 
