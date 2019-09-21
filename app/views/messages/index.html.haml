@@ -1,4 +1,3 @@
-
 .html
   = render "side_bar"
   .contents
@@ -12,16 +11,6 @@
     .contents__messages   
       .contents_group
         .contents__user
-          
-        .contents__comments
-
-    .contents__send
-      .contents__letterbox
-        .contents__letter
-        hello
-        .contents__photo
-          %i.fa.fa-image
-         
       .contents__btn
         .form
       = form_for [@group, @message] do |f|
@@ -31,4 +20,5 @@
             = fa_icon 'picture-o', class: 'icon'
             = f.file_field :image, class: 'hidden'
         = f.submit 'Send', class: 'form__submit'
-          SEND
+  .messages
+    = render @messages
