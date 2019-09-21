@@ -3,35 +3,26 @@
   = render "side_bar"
   .contents
     .contents__group
-      .contents__name
+      .contents__group__name
         test-group
-      .contents__edit
+      .contents__group__edit
         EDIT
-      .contents__member
+      .contents__group__member
         Member
     .contents__messages   
-      .contents_group
-        .contents__user
+      .contents__message__group
+        .contents__message__user
           
-        .contents__comments
+        .contents__message__comments
+    .contents__btn
+      .contents__btn__form
+        = form_for [@group, @message], :html => {:class => "contents__btn__form__box"} do |f|
+          = f.text_field :content, class: 'contents__btn__form__box__message', placeholder: 'type a message'
+          %div
+            = f.label :image, class: 'contents__btn__form__box__message__image' do
+              = fa_icon 'picture-o', class: 'contents__btn__form__box__message__image__icon'
+              = f.file_field :image, class: 'contents__btn__form__box__message__image__hidden'
+          = f.submit 'Send', class: 'contents__btn__form__box__submit'
+  .messages
+    = render @messages
 
-    .contents__send
-      .contents__letterbox
-        .contents__letter
-        hello
-        .contents__photo
-          %i.fa.fa-image
-         
-      .contents__btn
-        .form
-      = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-        .form__mask
-          = f.label :image, class: 'form__mask__image' do
-            = fa_icon 'picture-o', class: 'icon'
-            = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class: 'form__submit'
-<<<<<<< HEAD
-=======
-          SEND
->>>>>>> parent of ca4d551... Carrierwaveの成功
