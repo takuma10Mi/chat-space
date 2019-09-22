@@ -4,11 +4,16 @@
   .contents
     .contents__group
       .contents__group__name
-      -# = f.collection_check_boxes :user_ids, User.all, :id, :name
+        = @group.name
       .contents__group__edit
         EDIT
       .contents__group__member
-        Member
+        - @members.each_with_index do |member,i|
+          -if i == 0
+            = "member: #{member.name}"
+          -else
+            = "#{member.name}"
+
     .contents__messages   
       .contents_messages_chat
         = render partial: "message", collection: @messages
