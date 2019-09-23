@@ -6,7 +6,8 @@
       .contents__group__name
         = @group.name
       .contents__group__edit
-        EDIT
+        = link_to edit_group_path(@group) do
+          %div Edit
       .contents__group__member
         - @members.each_with_index do |member,i|
           -if i == 0
@@ -26,5 +27,3 @@
               = fa_icon 'picture-o', class: 'contents__btn__form__box__message__image__icon'
               = f.file_field :image, class: 'contents__btn__form__box__message__image__hidden'
           = f.submit 'Send', class: 'contents__btn__form__box__submit'
-  
-
