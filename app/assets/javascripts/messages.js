@@ -5,7 +5,7 @@ $('#new_message').on('submit', function(e){
   $.ajax({
     url: url,
     type: 'POST',
-    data: message,
+    data: formdata,
     dataType: 'json',
     processData: false,
     contentType: false
