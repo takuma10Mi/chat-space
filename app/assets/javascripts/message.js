@@ -1,6 +1,6 @@
 $(function(){ 
   function buildHTML(message){
-    var enzansi = ( message.image === null) ? `</div></div>`: `</div>
+    var messageimage = ( message.image === null) ? `</div></div>`: `</div>
     <img src=${message.image} >
   </div>`; 
 
@@ -17,7 +17,7 @@ $(function(){
                   <p class="lower-message__content">
                     ${message.content}
                   </p>
-                  ${enzansi}`
+                  ${messageimage}`
   return html;
   }
 $('.js-form').on('submit', function(e){
@@ -34,8 +34,8 @@ $('.js-form').on('submit', function(e){
  })
   .done(function(data){
     var html = buildHTML(data);
-    $('.messages').append(html);
-    $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');   
+    $('.contents_messages').append(html);
+    $('.contents_messages').animate({scrollTop: $('.contents_messages')[0].scrollHeight}, 'fast');   
     $('form')[0].reset();
   })
    .fail(function(){

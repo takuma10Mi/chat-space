@@ -23,10 +23,12 @@ $('#new_message').on('submit', function(e){
     $('.submit-btn').prop('disabled', false);
   })
   function scrollBottom(){
-    var target = $('.message').last();
-    var position = target.offset().top + $('.messages').scrollTop();
-    $('.messages').animate({
+    
+    var target = $('.contents_messages').last();
+    var position = target.offset().top + $('.contents_messages').scrollTop();
+    $('.contents_messages').animate({
       scrollTop: position
     }, 300, 'swing');
   }
+
 })
