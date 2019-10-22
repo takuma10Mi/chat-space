@@ -60,3 +60,8 @@ gem "erb2haml"
 gem "devise"
 gem 'carrierwave'
 gem 'mini_magick'
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
+end
