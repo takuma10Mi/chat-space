@@ -61,3 +61,8 @@ gem "devise"
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'jquery-rails'
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
+end
