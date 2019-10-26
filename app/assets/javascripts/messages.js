@@ -22,7 +22,7 @@ $(function(){
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formdata = new FormData(this);
-    var url = (window.location.href);
+    var url = $(this).attr('action');
     $.ajax({
       url: url,
       type: 'POST',
@@ -45,3 +45,4 @@ $(function(){
     })  
   })
 });
+
