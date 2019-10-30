@@ -56,7 +56,6 @@ $(function(){
     })
     .done(function(messages) {
       messages.forEach(function(message) {
-      console.log(messages)
       insertHTML = buildHTML(message);
         $('.contents_messages_chat').append(insertHTML);
       })
