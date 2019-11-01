@@ -66,3 +66,6 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-doc'
 end
+group :production do
+  gem 'unicorn', '5.4.1'
+end
