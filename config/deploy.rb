@@ -25,7 +25,7 @@ set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
 set :keep_releases, 5
 set :bundle_env_variables, { nokogiri_use_system_libraries: 1 }
-
+set :linked_files, %w{ config/secrets.yml }
 # デプロイ処理が終わった後、Unicornを再起動するための記述
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
@@ -33,7 +33,7 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
 end
-set :linked_files, %w{ config/secrets.yml }
+
 set :default_env, {
   rbenv_root: "/usr/local/rbenv",
   path: "/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH",
