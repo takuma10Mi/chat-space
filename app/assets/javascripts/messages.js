@@ -24,6 +24,7 @@ $(function(){
     e.preventDefault();
     var formdata = new FormData(this);
     var url = $(this).attr('action');
+    $('.contents__btn__form__box__submit').removeAttr('data-disable-with');
     $.ajax({
       url: url,
       type: 'POST',
@@ -38,7 +39,7 @@ $(function(){
       $("#new_message")[0].reset();
     })
     .fail(function(){
-      alert('エラーが発生したためメッセージは送信できませんでした。');
+      alert('メッセージが送信できませんでした。');
     })
     .always(function(){
       $('.contents__messages').animate({scrollTop: $('.contents__messages')[0].scrollHeight}, 'fast');
@@ -66,6 +67,6 @@ $(function(){
     })
     }
   };
-  setInterval(reloadMessages, 5000);
+  // setInterval(reloadMessages, 5000);
 });
 
