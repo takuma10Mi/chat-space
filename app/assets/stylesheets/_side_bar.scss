@@ -4,6 +4,9 @@
   width: 300px;
   float: left;
   text-decoration: none;
+  a {
+    text-decoration: none;
+    }
   .header {
     background-color: $side_blue_dark;
     height: 100px;
