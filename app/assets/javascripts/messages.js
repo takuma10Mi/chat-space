@@ -23,7 +23,7 @@ $(function(){
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formdata = new FormData(this);
-    var url = $(this).attr('action');
+    var url = (window.location.href);
     $('.contents__btn__form__box__submit').removeAttr('data-disable-with');
     $.ajax({
       url: url,
@@ -43,6 +43,7 @@ $(function(){
     })
     .always(function(){
       $('.contents__messages').animate({scrollTop: $('.contents__messages')[0].scrollHeight}, 'fast');
+      $('.contents__btn__form__box__submit').prop('disabled', false);
     })  
   })
   var reloadMessages = function() {
