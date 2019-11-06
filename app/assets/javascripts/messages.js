@@ -43,7 +43,6 @@ $(function(){
     })
     .always(function(){
       $('.contents__messages').animate({scrollTop: $('.contents__messages')[0].scrollHeight}, 'fast');
-      $('.contents__btn__form__box__submit').prop('disabled', false);
     })  
   })
   var reloadMessages = function() {
