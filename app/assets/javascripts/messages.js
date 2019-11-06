@@ -24,6 +24,7 @@ $(function(){
     e.preventDefault();
     var formdata = new FormData(this);
     var url = (window.location.href);
+    $('.contents__messages').animate({scrollTop: $('.contents__messages')[0].scrollHeight}, 'fast');
     $('.contents__btn__form__box__submit').removeAttr('data-disable-with');
     $.ajax({
       url: url,
@@ -42,7 +43,6 @@ $(function(){
       alert('メッセージが送信できませんでした。');
     })
     .always(function(){
-      $('.contents__messages').animate({scrollTop: $('.contents__messages')[0].scrollHeight}, 'fast');
       $('.contents__btn__form__box__submit').prop('disabled', false);
     })  
   })
