@@ -58,9 +58,8 @@ $(document).on('turbolinks:load', function(){
     .done(function(messages) {
       messages.forEach(function(message) {
       insertHTML = buildHTML(message);
-        $('.contents_messages_chat').append(insertHTML);
+      $('.contents_messages_chat').append(insertHTML);
       })
-      $('.contents__messages').animate({scrollTop: $('.contents__messages')[0].scrollHeight}, 'fast')
     })
     .fail(function() {
       alert("自動更新に失敗しました")
